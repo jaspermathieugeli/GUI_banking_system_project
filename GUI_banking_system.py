@@ -10,6 +10,9 @@ def create():
     creation_screen = Toplevel(master)
     creation_screen.title("Create")
 
+    Label(creation_screen, text="Name", font=("Calibri", 10)).grid(row=1, sticky=W)
+    Label(creation_screen, text="Passcode", font=("Calibri", 10)).grid(row=2, sticky=W)
+
 def log_in():
     pass
 
