@@ -12,6 +12,11 @@ def complete_creation():
 
     account_list = os.listdir()
 
+    if creation_name == "" or creation_passcode == "":
+        print("Please fill all fields.")
+        return
+    print("Yes.")
+
 def create():
 
     global name
@@ -25,6 +30,9 @@ def create():
 
     Label(creation_screen, text="Name", font=("Calibri", 10)).grid(row=1, sticky=W)
     Label(creation_screen, text="Passcode", font=("Calibri", 10)).grid(row=2, sticky=W)
+
+    notify = Label(creation_screen, font=("Calibri", 10))
+    notify.grid(row=4, sticky=W)
 
     Entry(creation_screen, textvariable=name).grid(row=1, column=1)
     Entry(creation_screen, textvariable=passcode, show="*").grid(row=2, column=1)
