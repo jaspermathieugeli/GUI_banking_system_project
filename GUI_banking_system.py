@@ -50,7 +50,9 @@ def create():
     Button(creation_screen, text="Create", command=complete_creation, font=("Calibri", 10)).grid(row=3, sticky=N, pady=10)
 
 def log_in():
-    pass
+
+    log_in_screen = Toplevel(master)
+    log_in_screen.title("Log In")
 
 image = Image.open("Images/bank.png")
 image = image.resize((200, 200))
