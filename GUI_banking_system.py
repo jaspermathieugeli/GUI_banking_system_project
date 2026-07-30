@@ -65,6 +65,7 @@ def log_in():
 
     global log_in_name
     global log_in_passcode
+    global log_in_notify
 
     log_in_name = StringVar()
     log_in_passcode = StringVar()
