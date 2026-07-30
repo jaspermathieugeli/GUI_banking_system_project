@@ -57,9 +57,19 @@ def  complete_logging_in():
     account_list = os.listdir()
 
     if logging_in_name == "" or logging_in_passcode == "":
-        print("Please fill all fields.")
+        log_in_notify.config(fg="black", text="Please fill all fields")
         return
-    print("Yes.")
+    log_in_notify.config(fg="black", text="Yes.")
+
+    for check in account_list:
+        if logging_in_name == check:
+            file = open(check, "r")
+            file_data = file.read()
+            file_data = file_data.split("\n")
+            print(file_data)
+            return
+    else:
+        log_in_notify.config(fg="black", text="Not exists.")
 
 def log_in():
 
