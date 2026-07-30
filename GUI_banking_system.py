@@ -63,6 +63,8 @@ def log_in():
     Entry(log_in_screen, textvariable=log_in_name).grid(row=1, column=1)
     Entry(log_in_screen, textvariable=log_in_passcode, show="*").grid(row=2, column=1)
 
+    Button(log_in_screen, text="Log In", font=("Calibri", 10)).grid(row=3, sticky=N, pady=10)
+
 image = Image.open("Images/bank.png")
 image = image.resize((200, 200))
 image = ImageTk.PhotoImage(image)
