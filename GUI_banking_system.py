@@ -6,7 +6,10 @@ master = Tk()
 master.title("Banking System")
 
 def create():
-    pass
+    
+    creation_screen = Toplevel(master)
+    creation_screen.title("Create")
+
 def log_in():
     pass
 
