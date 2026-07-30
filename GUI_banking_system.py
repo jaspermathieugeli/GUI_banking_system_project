@@ -19,6 +19,8 @@ def create():
     Entry(creation_screen, textvariable=name).grid(row=1, column=1)
     Entry(creation_screen, textvariable=passcode, show="*").grid(row=2, column=1)
 
+    Button(creation_screen, text="Create", font=("Calibri", 10)).grid(row=3, sticky=N, pady=10)
+
 def log_in():
     pass
 
