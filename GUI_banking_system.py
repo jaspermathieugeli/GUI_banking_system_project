@@ -34,7 +34,7 @@ def create():
 
     name = StringVar()
     passcode = StringVar()
-    
+
     creation_screen = Toplevel(master)
     creation_screen.title("Create")
 
@@ -56,6 +56,11 @@ def  complete_logging_in():
 
     account_list = os.listdir()
 
+    if logging_in_name == "" or logging_in_passcode == "":
+        print("Please fill all fields.")
+        return
+    print("Yes.")
+
 def log_in():
 
     global log_in_name
@@ -69,6 +74,9 @@ def log_in():
 
     Label(log_in_screen, text="Name", font=("Calibri", 10)).grid(row=1, sticky=W)
     Label(log_in_screen, text="Passcode", font=("Calibri", 10)).grid(row=2, sticky=W)
+
+    log_in_notify = Label(log_in_screen, font=("Calibri", 10))
+    log_in_notify.grid(row=4, sticky=W)
 
     Entry(log_in_screen, textvariable=log_in_name).grid(row=1, column=1)
     Entry(log_in_screen, textvariable=log_in_passcode, show="*").grid(row=2, column=1)
