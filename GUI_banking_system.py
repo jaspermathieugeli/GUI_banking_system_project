@@ -53,6 +53,9 @@ def  complete_logging_in():
     pass
 
 def log_in():
+    
+    global log_in_name
+    global log_in_passcode
 
     log_in_name = StringVar()
     log_in_passcode = StringVar()
