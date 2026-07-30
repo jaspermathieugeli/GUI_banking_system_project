@@ -13,9 +13,18 @@ def complete_creation():
     account_list = os.listdir()
 
     if creation_name == "" or creation_passcode == "":
-        print("Please fill all fields.")
+        notify.config(fg="black", text="Please fill all fields")
         return
-    print("Yes.")
+    notify.config(fg="black", text="Yes.")
+
+    for check in account_list:
+        if creation_name == check:
+            notify.config(fg="black", text="Already exists.")
+            return
+        else:
+            new = open(creation_name, "w")
+            new.write(creation_name + "\n")
+            new.write(creation_passcode + "\n")
 
 def create():
 
