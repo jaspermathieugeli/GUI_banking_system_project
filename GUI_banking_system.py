@@ -54,6 +54,9 @@ def log_in():
     log_in_screen = Toplevel(master)
     log_in_screen.title("Log In")
 
+    Label(log_in_screen, text="Name", font=("Calibri", 10)).grid(row=1, sticky=W)
+    Label(log_in_screen, text="Passcode", font=("Calibri", 10)).grid(row=2, sticky=W)
+
 image = Image.open("Images/bank.png")
 image = image.resize((200, 200))
 image = ImageTk.PhotoImage(image)
