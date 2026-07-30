@@ -21,6 +21,7 @@ def create():
 
     global name
     global passcode
+    global notify
 
     name = StringVar()
     passcode = StringVar()
