@@ -10,6 +10,9 @@ def complete_creation():
 
 def create():
 
+    global name
+    global passcode
+
     name = StringVar()
     passcode = StringVar()
     
