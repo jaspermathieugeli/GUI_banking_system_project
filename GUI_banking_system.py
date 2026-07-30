@@ -49,6 +49,9 @@ def create():
 
     Button(creation_screen, text="Create", command=complete_creation, font=("Calibri", 10)).grid(row=3, sticky=N, pady=10)
 
+def  complete_logging_in():
+    pass
+
 def log_in():
 
     log_in_name = StringVar()
@@ -63,7 +66,7 @@ def log_in():
     Entry(log_in_screen, textvariable=log_in_name).grid(row=1, column=1)
     Entry(log_in_screen, textvariable=log_in_passcode, show="*").grid(row=2, column=1)
 
-    Button(log_in_screen, text="Log In", font=("Calibri", 10)).grid(row=3, sticky=N, pady=10)
+    Button(log_in_screen, text="Log In", command=complete_logging_in, font=("Calibri", 10)).grid(row=3, sticky=N, pady=10)
 
 image = Image.open("Images/bank.png")
 image = image.resize((200, 200))
