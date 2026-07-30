@@ -14,3 +14,5 @@ Label(master, image=image).grid(row=2, sticky=N, pady=20)
 
 Button(master, text="Create", font=("Calibri", 10), width=20).grid(row=3, sticky=N, pady=5)
 Button(master, text="Log In", font=("Calibri", 10), width=20).grid(row=4, sticky=N, pady=5)
+
+master.mainloop()
