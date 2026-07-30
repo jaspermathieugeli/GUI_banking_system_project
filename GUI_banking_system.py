@@ -6,9 +6,11 @@ master = Tk()
 master.title("Banking System")
 
 def complete_creation():
-    
+
     creation_name = name.get()
     creation_passcode = passcode.get()
+
+    account_list = os.listdir()
 
 def create():
 
