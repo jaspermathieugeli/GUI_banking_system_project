@@ -50,10 +50,12 @@ def create():
     Button(creation_screen, text="Create", command=complete_creation, font=("Calibri", 10)).grid(row=3, sticky=N, pady=10)
 
 def  complete_logging_in():
-    pass
+    
+    logging_in_name = log_in_name.get()
+    logging_in_passcode = log_in_passcode.get()
 
 def log_in():
-    
+
     global log_in_name
     global log_in_passcode
 
