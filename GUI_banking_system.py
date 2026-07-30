@@ -51,11 +51,17 @@ def create():
 
 def log_in():
 
+    log_in_name = StringVar()
+    log_in_passcode = StringVar()
+
     log_in_screen = Toplevel(master)
     log_in_screen.title("Log In")
 
     Label(log_in_screen, text="Name", font=("Calibri", 10)).grid(row=1, sticky=W)
     Label(log_in_screen, text="Passcode", font=("Calibri", 10)).grid(row=2, sticky=W)
+
+    Entry(log_in_screen, textvariable=log_in_name).grid(row=1, column=1)
+    Entry(log_in_screen, textvariable=log_in_passcode, show="*").grid(row=2, column=1)
 
 image = Image.open("Images/bank.png")
 image = image.resize((200, 200))
